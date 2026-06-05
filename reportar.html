@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPORTE DE INCIDENTES</title>
+</head> 
+
+
+<body>
+    <header>
+        <h1>REPORTAR INCIDENTES</h1>
+        <img src="imagen/Reportes1.png" alt="texto alt " width="300" >
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="/index.html">Inicio</a></li>
+            <li><a href="/reportar.html">Reportar Incidentes</a></li>
+            <li><a href="/tickets.html">Tickets</a></li>
+        </ul>
+    </nav>
+    <main>
+          <section>
+            <article>
+                <h2>Formulario De Registros de Incidentes</h2>
+                <p><b>Descripcion:</b></p>
+                <form action="#" method="post"></form>
+                <label for="titulo">Titulo del incidente</label>
+               <input type="text" id="titulo" name="titulo" required 
+                       placeholder="ingrese titulo del incidente"> <br><br>
+                <label for="categoria"> <b>CATEGORIA</b></label><br>
+                <select id="categoria" name="categoria">
+                <option value="red">Red</option>
+                <option value="Hardware">Hardware</option>
+                <option value="Software">Software</option>
+                </select>
+                <br><br><br><br>
+                <p><b>Prioreidad</b></p>
+                <input type="radio" id="alta" name="Prioreidad" value="alta">
+                <label for="alta">Alta</label>
+                <input type="radio" id="media" name="Prioreidad" value="media">
+                <label for="media">Media</label>
+                <input type="radio" id="bajo" name="Prioreidad" value="bajo">
+                <label for="bajo">Bajo</label>
+                <br><br>
+                <label for="description">Descripcion detallada del incidentes:</label>
+                <br>
+                <textarea name="descripcion" id="description" rows="5" cols="40" required placeholder="ingrese descipcion detallada del incidente"></textarea> <br>
+                <button type="submit">Enviar</button>
+             </article>
+          </section>  
+        </main>
+        <footer>
+            <br><br>
+            <p> @2026 Gestor de Incidentes: reprteincidentehelpdesk@report.com</p>
+            <p><b>@ autor:</b> Chóez González Darwin</p>
+        </footer>
+</body>
+
+</html>
