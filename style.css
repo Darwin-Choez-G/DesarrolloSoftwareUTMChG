@@ -1,0 +1,215 @@
+/*paleta de colores*/
+:root { 
+  
+ --color-primary: #1182f3;
+  --color-secondary: #00b894;
+  --color-danger: #d63031;
+  --color-success: #2ecc71;
+  --color-warning: #f1c40f;
+  --color-error: #e74c3c;
+  --color-light: #f9f9f9;
+  --color-dark: #2d3436;
+  --color-verde-verdoso:#006666;
+  --color-rosa-coral:#ff8080;
+  --color-amarillo-pastel:#FFFF80;
+  --color-rojo-coral:#ff4D4D;
+  --color-carmin-claro:#ff6699;
+  --color-verde-neon:#4dff4d;
+  --color-arlequin:#4ce600;
+  --color-amarilloelectrico:#ffff00;
+  --color-turquezabrillante:#00e6e6;
+  --color-magentaoscuro:#990099;
+  --color-purpurafrio:#4d004d;
+  --color-lavanda:#ffccff;
+  --color-borgoña:#99001a;
+  --color-rosapalo:#ffccdd;
+  --color-verdeislamico:#009900;
+  --color-azulbondo:#0095b3;
+
+/* Variables globales */
+
+  --font-base: 'Segoe UI', Arial, serif, sans-serif;
+  --font-size-base: 30px;
+}
+
+/* Regla general de box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía base aplicada al body */
+body {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  background-color: var(--color-rojo-coral);
+  color: var(--color-secondary);
+  line-height: 1.5;
+}
+
+
+
+
+body p{
+    color:aquamarine;
+    position: center;
+    size:80%;
+    margin: auto;
+}
+
+header p {
+    color:aqua;
+    font-weight: 900;
+    text-shadow: 2px 0 0px #2ecc71;
+    font-size: 200%;
+}
+    /*  TITULO*/
+header h1 {
+    color:#A7DDEC;
+    background: #FFFFFF;
+    text-shadow: 2px 0 0px #800040, 3px 2px 0px rgba(77,0,38,0.5), 3px 0 3px #FF002B, 5px 0 3px #800015, 6px 2px 3px rgba(77,0,13,0.5), 6px 0 9px #FF5500, 8px 0 9px #802A00, 9px 2px 9px rgba(77,25,0,0.5), 9px 0 18px #FFD500, 11px 0 18px #806A00, 12px 2px 18px rgba(77,66,0,0.5), 12px 0 30px #D4FF00, 14px 0 30px #6A8000, 15px 2px 30px rgba(64,77,0,0.5), 15px 0 45px #80FF00, 17px 0 45px #408000, 17px 2px 45px rgba(38,77,0,0.5);
+    color: #A7DD3C;
+    background: #FFFFFF;
+    text-align: center;
+    font-size: 300%;
+}
+
+.detalle {
+    color:#ffbf00;
+}
+h2{
+    color:#400080;
+}
+/*aplicacion de estilo :hover :focus en los botones*/
+.btn {
+    color: #e4d20a;;
+    background-color:var(--color-success);
+    border-radius: 15%;
+    padding: 10px 30px;
+    font-size: 23px 20px;
+}
+
+.btn:hover{
+    background:var(--color-magentaoscuro);
+   
+}
+.btn:focus{
+  outline: 2px solid var(--color-warning); /* borde visible para accesibilidad */
+  outline-offset: 2px;
+}
+
+
+.btn-selec {
+   color:var(--color-light) ;
+    background-color: #006666;
+    border-radius: 6%;
+    background-size: 10px;
+    margin: 10px 10px;
+    font-style: italic;
+    width: 30px;
+    border: 5px;
+    padding: 6px 30px;
+    font-size: 16px;
+}
+
+
+/*Estilos en las terjetas*/
+.card{
+    width: 70%;
+    height: 10%;
+    color:#d63031;
+    background: linear-gradient(to right, #ff8080, yellow);
+    font-size:150%;
+    border: 2px solid var(--color-dark);
+    border-radius: 20px;
+    padding: 12%;
+    margin: 10px  10px auto;
+    box-shadow: 15px 15px 18px #20b90b;
+}
+.card-imag{
+    border-radius: 4%;
+    background-position:center;
+    margin-bottom: 10%;
+    background-size: over;
+}
+
+.ticket {
+    color: var(--color-secondary);
+}
+
+/*CAMPO DE FORMULARIO ESTILIZADO*/
+/* Campos de texto y listas desplegables */
+input[type="text"], select {
+  width: 200px;                  /* ancho fijo */
+  padding: 3px 6px;               /* espacio interno */
+  border: 4px solid #098978;        /* borde gris claro */
+  font-family: serif;
+  font-size:100%;
+  margin-bottom:2%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover: resalta el borde */
+input[type="text"]:hover, select:hover {
+  border-color: var(--color-warning);
+}
+
+/* Focus: sombreado al hacer clic o al recibir foco */
+input[type="text"]:focus, select:focus {
+  border-color: var(--color-lavanda);
+  box-shadow: 0 0 3px var(--color-magentaoscuro);
+}
+
+     /* Alertas*/
+
+.badge-alta {
+    color:var(--color-danger);
+    text-align: center;
+    font-size: 100%;
+    margin: 1%;
+}
+
+
+.badge-media{
+    color:var(--color-warning);
+    text-align: center;
+    font-size: 100%;
+    margin: 1%;
+    font-weight: bolder;
+    gap: 0.5rem;
+}
+
+.badge-baja{
+    color:var(--color-arlequin);
+    text-align: center;
+    font-size: 100%;
+    margin: 1%;
+    font-weight: bolder;
+}
+
+.alert{
+    width: 75%;
+    height: 50;
+    font-weight: bolder;
+    font-size: 150%;
+    font-weight: bolder;
+    padding: 10px 20px;
+    text-align: center;
+}
+.success{
+    color: var(--color-arlequin);
+    text-align: center;
+    border: 5px dotted black;
+    background-color: var(--color-verde-neon);
+}
+.danger{
+    color: var(--color-verde-neon);
+    background-color:var(--color-danger);
+    border: 5px dotted black;
+}
+
+.info{
+    color: var(--color-warning);
+    background-color:var(--color-amarillo-pastel);
+}
