@@ -29,11 +29,11 @@
 /* Variables globales */
 
   --font-base: 'Segoe UI', Arial, serif, sans-serif;
-  --font-size-base: 30px;
+  --font-size-base: 20px;
 }
 
 /* Regla general de box-sizing */
-* {
+*main {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -49,6 +49,220 @@ body {
 }
 
 
+/*===========================*/
+/* Barra de navegación con Flexbox */
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bar li a {
+  text-decoration: none;
+  color:var(--color-success);
+  font-size: 30px;
+}
+
+/* Dashboard con Grid */
+.dashboard {
+  display: grid;
+  grid-template-columns: 300fr 50fr;
+  gap: 20px;
+  padding: 20px;
+  margin: 10px  10px auto;
+}
+
+/* Formularios estilizados */
+.form-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+footer{
+    margin-top:auto;
+}
+
+
+/* Responsividad con Media Queries */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+   
+   
+
+  .dashboard {
+    grid-template-columns: 1fr;
+    margin: 10px  10px auto;
+    margin: 10%;
+    font-size: 20px;
+    color:var(--color-verde-verdoso)
+  }
+
+  input, table, form {
+    width: 100%;
+  }
+ .nav-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /*   reportes   */
+  .form-card {
+    width: 100%;
+  }
+
+  textarea, input, select {
+    width: 100%;
+  }
+  /*  para ticket tablas*/
+
+   .table-card {
+    font-size: 14px;
+    
+  }
+
+  .table-card th, .table-card td {
+    padding: 20px;
+  }
+
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto; /* evita scroll horizontal */
+  }
+
+
+/* Móviles */
+
+@media (max-width:768px){
+
+    header h1{
+        font-size:1.8rem;
+    }
+
+    h2{
+        font-size:1.4rem;
+    }
+
+    h4{
+        font-size:1.1rem;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .card-text{
+        text-align:center;
+    }
+
+}
+
+/* Pantallas muy pequeñas */
+
+@media (max-width:576px){
+
+    body{
+        font-size:16px;
+    }
+
+    header{
+        padding:20px 10px;
+    }
+
+    .card{
+        margin:10px;
+    }
+
+}
+
+
+/* Tablet */
+
+@media (max-width:992px){
+
+    header h1{
+        font-size:2.3rem;
+    }
+
+}
+
+/*    ajustes para movil*/
+@media (max-width: 768px) {
+
+    h2{
+        font-size:1.5rem;
+    }
+    header h1{
+        font-size:2.3rem;
+    }
+
+    .card{
+         width:100%;
+    max-width:900px;
+    margin:auto;
+    
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    textarea{
+        min-height:140px;
+    }
+
+}
+
+
+}
+
+
+/* Estilo para tablas tipo tarjeta */
+.table-card {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: var(--color-light);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.table-card th, .table-card td {
+  border: 1px solid var(--color-dark);
+  padding: 10px;
+  text-align: center;
+}
+
+.table-card th {
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+}
+
+.informer{
+    color: var(--color-dark);
+    font-size: 20px;
+    text-align: center;
+}
+
+/*=======================*/
+
+.header{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+}
 
 
 body p{
@@ -99,8 +313,23 @@ h2{
   outline-offset: 2px;
 }
 
+.nav-item:hover{
+    color:var(--color-arlequin)
+    background:var(--color-magentaoscuro);
+}
 
 .btn-selec {
+    color:var(--color-amarillo-pastel)
+}
+
+.nav-bar li a:hover {
+  
+  color:var(--color-dark);
+  
+}
+
+
+.btn-enviar {
    color:var(--color-light) ;
     background-color: #006666;
     border-radius: 6%;
@@ -116,15 +345,17 @@ h2{
 
 /*Estilos en las terjetas*/
 .card{
-    width: 70%;
-    height: 10%;
+
+    width: 100%;
+    max-width:900px;
+    height: auto;
     color:#d63031;
     background: linear-gradient(to right, #ff8080, yellow);
     font-size:150%;
     border: 2px solid var(--color-dark);
     border-radius: 20px;
-    padding: 12%;
-    margin: 10px  10px auto;
+    padding: 30px;
+    margin: 30px auto;
     box-shadow: 15px 15px 18px #20b90b;
 }
 .card-imag{
@@ -132,6 +363,30 @@ h2{
     background-position:center;
     margin-bottom: 10%;
     background-size: over;
+
+     width:100%;
+    max-width:900px;
+    margin: auto;
+    padding:0;
+    height:auto;
+    border:2px solid var(--color-dark);
+    border-radius:20px;
+    background:linear-gradient(to right,#ff8080,yellow);
+    box-shadow:15px 15px 18px #20b90b;
+}
+.card-imag{
+     max-width:600px;
+    width:350%;
+    height:auto;
+    border-radius: 4%;
+    background-position:center;
+     margin:20px auto;
+    margin-bottom: 2%;
+    background-size: over;
+     display:block;
+}
+.table-cardt{
+    color:#3078d6;
 }
 
 .ticket {
@@ -162,12 +417,19 @@ input[type="text"]:focus, select:focus {
 }
 
      /* Alertas*/
-
 .badge-alta {
     color:var(--color-danger);
     text-align: center;
     font-size: 100%;
     margin: 1%;
+}
+
+.formulario {
+    color:var(--color-magentaoscuro);
+    text-align: center;
+    font-size: 100%;
+    margin: 1%;
+    padding: 12%;
 }
 
 
@@ -187,6 +449,15 @@ input[type="text"]:focus, select:focus {
     margin: 1%;
     font-weight: bolder;
 }
+
+.badge-alta{
+    color:var(--color-danger);
+    text-align: center;
+    font-size: 100%;
+    margin: 1%;
+    font-weight: bolder;
+}
+
 
 .alert{
     width: 75%;

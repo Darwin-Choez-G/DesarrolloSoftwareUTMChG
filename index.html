@@ -4,35 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> REPORTE DE INCIDENTES</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styless.css">
 </head>
  
 <body>
-   <header> 
-        <h1> GESTION DE INCIDENTES</h1>
-       <img src="imagen/gestordeayuda.jpg" alt="texto alt" width="200">
-   </header>
-<nav> 
-    <ul>
-        <li> <a href="index.html">Inicio</a></li>
-        <li><a href="reportar.html">Reportar Incidentes</a></li>
-        <li><a href="tickets.html">Tickets</a></li>
-    </ul>
-</nav>
+  <header class="container-fluid py-4 text-center">
 
-<h2>BIENVENIDOS AL SISTEMA DE GESTION DE INCIDENTES</h2>
-<h4> REPORTES</h4>
-<main>
-    <section> 
-        <article> 
-          <p> Este sistema permite registrar, organizar y dar seguimiento a los incidentes reportados por los usuarios</p>
-          <input type="text" id="reportes" name="titulo" required>
-        </article>
-    </section>
+    <h1>GESTIÓN DE INCIDENTES</h1>
+
+    <img src="imagen/gestordeayuda.jpg"
+         class="img-fluid card-imag"
+         alt="Gestor de Incidentes">
+
+</header>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            Help Desk
+        </a>
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reportar.html">Reportar Incidentes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tickets.html">Tickets</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h2 class="text-center mb-4">
+                        Bienvenidos al Sistema de Gestión de Incidentes
+                    </h2>
+                    <h4 class="text-center text-primary mb-3">
+                        Reportes
+                    </h4>
+                    <p class="card-text text-center">
+                        Este sistema permite registrar, organizar y dar seguimiento a los incidentes reportados por los usuarios.
+                    </p>
+                    <div class="d-flex flex-column flex-md-row gap-3 mt-4">
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="reportes"
+                            name="titulo"
+                            placeholder="Ingrese el título del incidente">
+                        <button class="btn btn-primary">
+                            Enviar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
-<footer> 
-    <br><br>
-    <p> @2026 Gestor de Incidentes: reporteincidnteshelpdesk@reportes.com</p>
-    <p><b>@ autor:</b>Chóez González Darwin</p>
+
+<footer class="container-fluid bg-dark text-white text-center py-4">
+
+    <p class="mb-1">
+        © 2026 Gestor de Incidentes
+    </p>
+
+    <p class="mb-1">
+        reporteincidenteshelpdesk@reportes.com
+    </p>
+
+    <p class="mb-0">
+        <strong>Autor:</strong> Chóez González Darwin
+    </p>
 </footer>
 </body>
 </html>
